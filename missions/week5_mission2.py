@@ -64,7 +64,7 @@ def check(data_list , alist):
         check_list.sort(reverse=True)
     return check_list
 
-a = ['3','2','4','2','5','2','4','3','1','2']
+a = ['3','2','4','2','5','2','4','3','1','2']   #정답
 s = input_data()    #학생 자료 입력 함수까지 완.
 result = check(s , a)
 print(result)
