@@ -7,3 +7,24 @@
 4. 가장 많이 나온 단어 찾는 함수
 5. 가장 많이 나온 단어와 수를 출력
 '''
+
+fhand = open('crown.txt')
+strings = fhand.readline().split()
+
+def find_max(line):
+    fdic = {}
+    count = 0
+    word = ''
+    for i in line:  #해당 for문대신 딕셔너리명.get()을 사용할 수 있음.
+        if i in fdic:
+            fdic[i] = fdic[i]+1
+        else:
+            fdic[i] = 0
+    for i in fdic:
+        if fdic[i] > count:
+            count = fdic[i]
+            word = i
+    return word, count
+
+word1, count1 = find_max(strings)
+print(word1, count1)
