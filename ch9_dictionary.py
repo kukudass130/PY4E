@@ -25,6 +25,7 @@ def find_max(line):
             count = fdic[i]
             word = i
     return word, count
+    #dict()의 key와 value를 동시에 가져오고 싶다면 딕셔너리명.items()을 사용하자.
 
 word1, count1 = find_max(strings)
 print(word1, count1)
